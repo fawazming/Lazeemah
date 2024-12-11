@@ -140,8 +140,18 @@ main{
       line-height: 25px;
   }
   .comment{
-      margin-left: 20px;
-      flex-wrap: nowrap;
+      /* margin-left: 20px; */
+      line-height: 0;
+  }
+  #Psy,#Aff{
+    background-color: #c8edf3;
+  }
+  #Grad{
+    background-color: #f3c8c8;
+  }
+  #sig{
+    display: block;
+    margin-left: 400px;
   }
 
   .text-center{

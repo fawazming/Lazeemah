@@ -60,7 +60,7 @@
             <section style="display: flex; margin-top: 150px; justify-content: center;">
                 <table class="table table-sm table-bordered" style="width: 70%;">
 
-                    <thead>
+                    <thead id="Grad">
                         <tr>
                             <th class="">Grading Key</th>
                         </tr>
@@ -78,7 +78,7 @@
             <section class="mt-2" style="display: flex; margin-top: 20px;">
                 <table class="table table-sm table-bordered" style="width: 30%;">
 
-                    <thead>
+                    <thead id="Aff">
                         <tr>
                             <th class="">Affective Areas</th>
                             <th class="">Rating</th>
@@ -89,7 +89,7 @@
                 </table>
                 <table class="table table-sm table-bordered" style="width: 35%;">
 
-                    <thead>
+                    <thead id="Psy">
                         <tr>
                             <th class="">PSYCHOMOTOR Skills</th>
                             <th class="">Rating</th>
@@ -113,12 +113,12 @@
             </div>
             <footer>
                 <div class="">
-                    <p class="">Class Teacher's Comment: </p>
-                    <b id="cTeacher"></b>
+                    <p class="comment">Class Teacher's Comment: </p>
+                    <b id="cTeacher"></b> <span id="sig">Signature & Date</span>
                     <br>
                     <br>
-                    <p class="">Head Teacher's Comment: </p>
-                    <b id="hTeacher"></b>
+                    <p class="comment">Head Teacher's Comment: </p>
+                    <b id="hTeacher"></b> <span id="sig">Signature & Date</span>
                 </div>
 
             </footer>
@@ -176,7 +176,7 @@
             // Update the HTML elements with the student data
             clonedVar(clonedSheet, ['sname','sclass','age','schOpened','present','absent','nic','perc','schResumes','cTeacher','hTeacher'])
             clonedSheet.querySelector('#sname').innerHTML = students[id]["Student Name"];
-            clonedSheet.querySelector('#sclass').innerHTML = students[id]["Class"];
+            clonedSheet.querySelector('#sclass').innerHTML =  students[id]["Class"].toUpperCase();
             clonedSheet.querySelector('#age').innerHTML = students[id]["Age"];
             clonedSheet.querySelector('#schOpened').innerHTML = students[id]["School_Opens"];
             clonedSheet.querySelector('#present').innerHTML = students[id]["Time_present"];
